@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Route} from "react-router-dom";
 import AnimatedWrapper from "./AnimatedWrapper";
 import logo from './logo.svg';
+import rect1 from './img/rect1.png';
+import rect2 from './img/rect2.jpg';
+import rect3 from './img/rect3.jpg';
 
 import Slider from "react-slick";
 
@@ -45,9 +48,9 @@ class Home extends Component {
                         <h2>Custom Paging</h2>
                         <Slider {...settings}>
                             <div><img src={logo} className="App-logo" alt="logo"/></div>
-                            <div><img src={logo} className="App-logo" alt="logo"/></div>
-                            <div><img src={logo} className="App-logo" alt="logo"/></div>
-                            <div><img src={logo} className="App-logo" alt="logo"/></div>
+                            <div><img src={rect1} className="App-logo" alt="logo"/></div>
+                            <div><img src={rect2} className="App-logo" alt="logo"/></div>
+                            <div><img src={rect3} className="App-logo" alt="logo"/></div>
                         </Slider>
                     </div>
                     <div id="footer">
