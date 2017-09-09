@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {Route} from "react-router-dom";
 import AnimatedWrapper from "./AnimatedWrapper";
+import logo from './logo.svg';
 
+import Slider from "react-slick";
 
 class Home extends Component {
 
@@ -16,6 +18,17 @@ class Home extends Component {
     }
 
     render() {
+        const settings = {
+            customPaging: function(i) {
+                return <a><image src={`/rect${i+1}.png`}/></a>
+            },
+            dots: true,
+            dotsClass: 'slick-dots slick-thumb',
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
         return (
             <div className="page">
                 <div className="inputRow">
@@ -27,6 +40,15 @@ class Home extends Component {
                     </div>
                     <div id="right">
                         <input ref="input3" placeholder="Enter Target Net Worth"/>
+                    </div>
+                    <div>
+                        <h2>Custom Paging</h2>
+                        <Slider {...settings}>
+                            <div><img src={logo} className="App-logo" alt="logo"/></div>
+                            <div><img src={logo} className="App-logo" alt="logo"/></div>
+                            <div><img src={logo} className="App-logo" alt="logo"/></div>
+                            <div><img src={logo} className="App-logo" alt="logo"/></div>
+                        </Slider>
                     </div>
                     <div id="footer">
                         <Route render={({history}) => (
@@ -46,7 +68,6 @@ class Home extends Component {
         );
     }
 }
-
 
 Home.displayName = 'Home';
 
