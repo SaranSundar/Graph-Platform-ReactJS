@@ -1,0 +1,128 @@
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.App {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+.TopBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    padding: 0 24px;
+}
+.TopBar a {
+    margin-right: 18px;
+    text-decoration: none;
+}
+.animated-page-wrapper {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#footer{
+    clear: both;
+    text-align: center;
+}
+
+input{
+    width: 12vw;
+    height: 4vh;
+    border: solid 2px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+    color: black;
+    font-size: 3.5vh;
+}
+
+input:focus{
+    border: solid 2px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+button{
+    color: #202129;
+    background-color: #f2f2f2;
+    box-shadow: 2px 5px 10px #161616;
+    padding: 2vw 4vw;
+    border: 0 none;
+    border-radius: 4px;
+    margin-top: 10vh;
+}
+
+button:hover{
+    color: #202129;
+    background-color: #e1e2e2;
+    opacity: 1;
+}
+
+button:active {
+    background-color: #d5d6d6;
+    opacity: 1;
+
+}
+
+.header{
+    background-color: #6A655F;
+    width: 100vw;
+    height: 15vh;
+    text-align: center;
+}
+
+.header h1{
+    color: white;
+    font-size: 5vh;
+    letter-spacing: 5px;
+    padding-top: 4vh;
+}
+
+.page {
+    width: 75vw;
+    margin: auto;
+}
+
+.inputRow{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.input{
+    display: inline-block;
+    list-style: none;
+}
+
+#left{
+    width: 25vw;
+    height: 10vh;
+    float: left;
+}
+
+#center{
+    width: 25vw;
+    height: 10vh;
+    float: left;
+}
+
+#right{
+    width: 25vw;
+    height: 10vh;
+    float: left;
+}
+
