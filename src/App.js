@@ -13,26 +13,28 @@ class App extends Component {
 
     constructor(props){
         super(props);
-        this.state = {years: -1, risk: -1, target: -1, page: 'home'};
+        this.state = {years: -1, risk: -1, target: -1, page: 'home', index: 0};
         this.receieveCalcInfo = this.receieveCalcInfo.bind(this);
     }
 
-    receieveCalcInfo(yearsNew, riskNew, targetNew, pageNew){
-        this.setState({years: yearsNew, risk: riskNew, target: targetNew, page: pageNew});
+    receieveCalcInfo(yearsNew, riskNew, targetNew, pageNew, indexNew, sliderNew){
+        this.setState({years: yearsNew, risk: riskNew, target: targetNew, page: pageNew, index: indexNew, slider: sliderNew});
         //alert(yearsNew + " " + riskNew + " " + targetNew + " " + pageNew);
     }
 
     render() {
         return (
-            <div className="App">
+            <div>
                 {/*<div className="TopBar">*/}
-                    {/*<Link to="/">Home</Link>*/}
-                    {/*/!*<Link to="/subpage">Subpage</Link>*!/*/}
+                {/*<Link to="/">Home</Link>*/}
+                {/*/!*<Link to="/subpage">Subpage</Link>*!/*/}
                 {/*</div>*/}
 
-                <div className="header">
-                    <h1>SC Stock Calculator</h1>
-                </div>
+                <section className="hero is-primary">
+                    <div className="container has-text-centered">
+                        <h1 className="content is-size-1 is-size-3-touch">SC Stock Calculator</h1>
+                    </div>
+                </section>
 
                 <Switch>
                     <Route
